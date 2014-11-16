@@ -1,0 +1,52 @@
+** About
+
+Do you use =~/.authinfo.gpg= (or a simple =~/.authinfo=) to keep your
+IRC, mail and other passwords for Emacs?  Do you play [[https://www.themanaworld.org/][The Mana World]]?
+If you do, then why not store your credentials for TMW in authinfo as
+well, so that you will never be prompted about a user name and a
+password when you start [[http://manaplus.org/][manaplus]].  This package was written just for
+that.
+
+** Installation
+
+*** Automatic
+
+This package may be installed using [[https://github.com/quelpa/quelpa][Quelpa]]:
+
+#+BEGIN_SRC emacs-lisp
+(quelpa '(mana :fetcher github :repo "alezost/mana.el"))
+#+END_SRC
+
+*** Manual
+
+To install this package manually, add the following to your emacs
+init file:
+
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'load-path "/path/to/dir-with-mana-package")
+(autoload 'mana-start "mana" nil t)
+#+END_SRC
+
+** Usage
+
+You can use =M-x mana-start= to start manaplus but before that, add a
+line with your credentials to authinfo file.  It should look like this:
+
+: machine server.themanaworld.org login <your-user> password <your-password>
+
+** Configuration
+
+If you want a particular game character to be automatically selected
+after manaplus start, set =mana-character= variable.
+
+If you need to see the output of the manaplus process, look at the
+=*mana-output*= buffer (the name may be changed with =mana-buffer-name=
+variable).
+
+** To be done
+
+For now I am the only user of this package and as I play TMW only, I
+didn't bother about generalizing this package for other servers (for
+example for [[http://evolonline.org/][Evol Online]]).  But it will be very easy to do and if YOU
+wish to see a support for other servers, please contact me and this
+support will be added.
