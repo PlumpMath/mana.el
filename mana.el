@@ -57,6 +57,7 @@
 ;;; Code:
 
 (require 'cl-lib)
+(require 'auth-source)
 
 (defgroup mana nil
   "Interface for starting manaplus client using authinfo file.
@@ -94,8 +95,6 @@ authentication files from `auth-sources' variable."
      (:constructor mana-make-credentials (user password))
      (:copier nil))
   user password)
-
-(declare-function auth-source-search "auth-source" t)
 
 (defun mana-credentials ()
   "Return credentials from authinfo file."
