@@ -5,7 +5,6 @@
 ;; Author: Alex Kost <alezost@gmail.com>
 ;; Created: 12 Nov 2014
 ;; Version: 0.1
-;; URL: https://gitorious.org/alezost-emacs/mana
 ;; URL: https://github.com/alezost/mana.el
 ;; Keywords: games
 
